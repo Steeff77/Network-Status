@@ -43,7 +43,7 @@ $namen    = array(
 
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.6/paper/bootstrap.min.css" rel="stylesheet">
-<link href="https://static.itsstefan.eu/cdn/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://static.itsstefan.eu/cdn/css/bootstrap.css" rel="stylesheet">
 <link href="https://static.itsstefan.eu/cdn/css/starter-template.css" rel="stylesheet">
 <link rel="icon" type="image/png" href="https://static.itsstefan.eu/cdn/favicon.ico" />
 <style>
