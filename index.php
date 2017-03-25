@@ -35,17 +35,17 @@ $namen    = array(
 
 <meta property="og:title" content="Network Status"/>
 <meta property="og:type" content="website">
-<meta property="og:url"   content="https://server.checkuptime.nl"/>
-<meta property="og:image" content="https://server.checkuptime.nl/shot-20170125-12783-1n2t37b.jpeg"/>
+<meta property="og:url"   content="https://static.itsstefan.eu"/>
+<meta property="og:image" content="https://static.itsstefan.eu/cdn/shot-20170125-12783-1n2t37b.jpeg"/>
 <meta property="og:description" content="Bekijk de status van onze websites en services!" />
 
 <meta name="description" content="Bekijk de status van onze websites en services!">
 
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.6/paper/bootstrap.min.css" rel="stylesheet">
-<link href="//checkuptime.nl/css/bootstrap.min.css" rel="stylesheet">
-<link href="//checkuptime.nl/css/starter-template.css" rel="stylesheet">
-<link rel="icon" type="image/png" href="favicon.ico" />
+<link href="https://static.itsstefan.eu/cdn/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://static.itsstefan.eu/cdn/css/starter-template.css" rel="stylesheet">
+<link rel="icon" type="image/png" href="https://static.itsstefan.eu/cdn/favicon.ico" />
 <style>
 th, td {
     padding: 8px;
