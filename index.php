@@ -11,8 +11,8 @@ $websites = [
 
 $data = array_map(function ($website) {
     return [
-        'name'   => $website['name'],
-        'status' => check($website['domain'], $website['port']),
+        'name' => $website['name'],
+        'ping' => check($website['domain'], $website['port']),
     ];
 }, $websites);
 

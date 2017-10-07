@@ -30,11 +30,11 @@
             <td>Ping</td>
         </tr>
         <?php foreach ($data as $website): ?>
-            <?php if (null !== $website['status']): ?>
+            <?php if (null !== $website['ping']): ?>
                 <tr>
                     <td><?= $website['name'] ?></td>
                     <td><span class="label label-success">Online</span></td>
-                    <td><?= $website['status'] ?>ms</td>
+                    <td><?= $website['ping'] ?>ms</td>
                 </tr>
             <?php else: ?>
                 <tr>
