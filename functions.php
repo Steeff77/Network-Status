@@ -11,7 +11,7 @@ declare(strict_types=1);
 function check(string $domain, int $port): ?int
 {
     $startTime = microtime(true);
-    $file = @fsockopen($domain, $port, $errno, $errstr, 10);
+    $file = @fsockopen($domain, $port, $errno, $errstr, 1);
     $stopTime = microtime(true);
     $status = null;
 
