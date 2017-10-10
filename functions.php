@@ -8,7 +8,7 @@ declare(strict_types=1);
  * @param int $port
  * @return int|null Ping to the server in ms
  */
-function check(string $domain, int $port): ?int
+function check(string $domain, int $port): int
 {
     $startTime = microtime(true);
     $file = @fsockopen($domain, $port, $errno, $errstr, 1);
