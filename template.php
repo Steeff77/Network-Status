@@ -18,6 +18,9 @@
         th, td {
             padding: 8px;
         }
+        footer {
+        text-align: center;
+        }
     </style>
 </head>
 <div align="center">
