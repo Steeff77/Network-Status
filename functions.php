@@ -7,6 +7,7 @@ declare(strict_types=1);
  * @param string $domain
  * @param int $port
  * @return int|null Ping to the server in ms
+ *
  */
 function check(string $domain, int $port): int
 {
