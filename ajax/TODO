@@ -1,1 +1,1 @@
-add .htaccess to rewrite /ajax/status to /ajax/status.php
+add .htaccess to rewrite /ajax/status/(id) to /ajax/status.php?id=(id)
