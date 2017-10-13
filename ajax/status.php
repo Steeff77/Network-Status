@@ -1,6 +1,6 @@
 <?php 
 
-require_once '../networkstatus.class.php';
+require_once '../includes/networkstatus.class.php';
 require_once '../config.php';
 
 $networkstatus = new Networkstatus("");
