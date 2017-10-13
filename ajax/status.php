@@ -13,12 +13,12 @@ if($id != "" && $websites[$id] != null){
 	$ping = $networkstatus->check($websites[$id]['domain'], $websites[$id]['port']);
 	
 	if($ping === null){
-		$array = array("error" => false, "online" => false);
+		$array = array("id" => $id, "error" => false, "online" => false);
 	}else{
-		$array = array("error" => false, "online" => true, "ping" => $ping);
+		$array = array("id" => $id, "error" => false, "online" => true, "ping" => $ping);
 	}
 }else{
-	$array = array("error" => true, "message" => "website '{$id}' is not found");
+	$array = array("id" => $id, "error" => true, "message" => "website '{$id}' is not found");
 }
 
 echo json_encode($array);

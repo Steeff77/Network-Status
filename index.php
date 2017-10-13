@@ -11,7 +11,6 @@ $data = array_map(function ($website) {
 	
     return [
         'name' => $website['name'],
-        'ping' => $networkstatus->check($website['domain'], $website['port'])
     ];
 }, $websites);
 
