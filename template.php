@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.6/paper/bootstrap.min.css" rel="stylesheet">
     <link href="https://static.itsstefan.eu/cdn/css/bootstrap.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Feel free to use this domain for the style, it's CDN hosted, -->
     <link rel="icon" type="image/png" href="https://static.itsstefan.eu/cdn/favicon.ico"/>
     <style>
@@ -32,24 +33,45 @@
             <td>Status</td>
             <td>Ping</td>
         </tr>
-        <?php foreach ($data as $website): ?>
-            <?php if (null !== $website['ping']): ?>
-                <tr>
-                    <td><?= $website['name'] ?></td>
-                    <td><span class="label label-success">Online</span></td>
-                    <td><?= $website['ping'] ?>ms</td>
-                </tr>
-            <?php else: ?>
-                <tr>
-                    <td><?= $website['name'] ?></td>
-                    <td><span class="label label-danger">Offline</span></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            <?php endif; ?>
+        <?php foreach ($data as $key=>$website): ?>
+            <tr>
+                <td><?= $website['name'] ?></td>
+				<td id="badge<?= $key ?>"><span class="label label-warning">Pinging...</span></td>
+                <td id="ping<?= $key ?>"></td>
+            </tr>
         <?php endforeach; ?>
     </table>
 </div>
 <footer>
     <p> &copy; Stefan &amp; Indra, <?= date('Y'); ?></p>
 </footer>
+<script>
+window.onload = function(){
+	var sites = <?= json_encode($data) ?>;
+	
+	for(item in sites){	
+		$.ajax({
+			type: "get",
+			url: "ajax/status.php",
+			data: "id=" + item,
+			success: function(data){
+				var json = JSON.parse(data);
+				console.log(data);
+				
+				if(json == null || json.error == true){
+					$("#badge" + json.id).html("<span class=\"label label-danger\">Error</span>");
+					return;
+				}
+				
+				if(json.online == true){
+					$("#badge" + json.id).html("<span class=\"label label-success\">Online</span>");
+					$("#ping" + json.id).html(json.ping + "ms");
+				}else{
+					$("#badge" + json.id).html("<span class=\"label label-danger\">Offline</span>");
+					$("#ping" + json.id).html("");
+				}
+			}
+		});
+	}
+}
+</script>
