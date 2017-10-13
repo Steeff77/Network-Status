@@ -8,6 +8,6 @@ $websites = [
 ];
 
 // you can create your own templates and change the template which will be used here
-$template = __DIR__ . "/template.php";
+$template = __DIR__ . "/includes/template.php";
 
 ?>
