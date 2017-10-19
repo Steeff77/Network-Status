@@ -5,17 +5,17 @@ declare(strict_types=1);
 class Networkstatus {
 
 	public $template;
-	
+
 	/**
 	* Intialize the networkstatus class
 	*
 	* @param string $template
 	* @return void
 	*/
-	function __construct($template){
+	function __construct($template = ""){
 		$this->template = $template;
 	}
-	
+
 	/**
 	* Check for server availability
 	*
