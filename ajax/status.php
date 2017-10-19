@@ -1,24 +1,38 @@
-<?php 
+<?php
 
 require_once '../includes/networkstatus.class.php';
 require_once '../config.php';
 
-$networkstatus = new Networkstatus("");
+$networkstatus = new Networkstatus;
 
 $id = $_GET['id'];
-$array;
+$response = [
+	$id => $id
+];
 
-// empty($id) retuns true :/
-if($id != "" && $websites[$id] != null){
+if(is_numeric($id) && array_key_exists($id, $websites)) {
 	$ping = $networkstatus->check($websites[$id]['domain'], $websites[$id]['port']);
-	
-	if($ping === null){
-		$array = array("id" => $id, "error" => false, "online" => false);
-	}else{
-		$array = array("id" => $id, "error" => false, "online" => true, "ping" => $ping);
+	if($ping === null) {
+		$response = [
+			'id' => $id,
+			'error' 	=> false,
+			'online' 	=> false
+		];
+	} else {
+		$response = [
+			'id' => $id,
+			'error' 	=> false,
+			'online' 	=> true,
+			'ping' 		=> $ping
+		];
 	}
-}else{
-	$array = array("id" => $id, "error" => true, "message" => "website '{$id}' is not found");
+} else {
+	$response = [
+		'id' => $id,
+		'error' 	=> true,
+		'online' 	=> false,
+		'message' => 'Website ' . $id . ' could not be found.'
+	];
 }
 
-echo json_encode($array);
+echo json_encode($response);
