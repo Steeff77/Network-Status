@@ -44,7 +44,7 @@
     </table>
 </div>
 <footer>
-    <p> &copy; Stefan &amp; Indra, <?= date('Y'); ?></p>
+    <p> Powered by, <a href="https://github.com/SupremeNL/Network-Status">Network-Status</a> </p>
 </footer>
 <script>
 window.onload = function(){

@@ -1,3 +1,2 @@
-#Automatisch gegenereerde robots.txt door Stefan.
 User-agent: *
-Crawl-delay: 10
+Disallow: /ajax/
