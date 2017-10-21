@@ -9,3 +9,6 @@ Thanks to: ElForastero Refactored according to PHP 7.1
 
 Update: 10/13/2017
 Rewrote some code, added config.php, moved files and added ajax support
+
+Update: 10/21/2017
+Added an login.php for furter features
