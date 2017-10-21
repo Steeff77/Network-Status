@@ -22,9 +22,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     <meta name="description" content="Lookup the status of our websites and services!"/>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- Feel free to use this domain for the style, it's CDN hosted, -->
+	<link rel="stylesheet" href="https://static.itsstefan.eu/cdn/css/bootstrap.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
-    <!-- Feel free to use this domain for the style, it's CDN hosted, -->
     <link rel="icon" type="image/png" href="favicon.ico"/>
 	<style>
         footer {
