@@ -1,10 +1,12 @@
 <?php
 
 declare(strict_types=1);
+session_start();
 
 class Networkstatus {
 
 	public $template;
+	public $config;
 
 	/**
 	* Intialize the networkstatus class
@@ -12,7 +14,8 @@ class Networkstatus {
 	* @param string $template
 	* @return void
 	*/
-	function __construct($template = ""){
+	function __construct($protected, $template = ""){
+		$this->config = $protected;
 		$this->template = $template;
 	}
 
@@ -37,6 +40,26 @@ class Networkstatus {
 		fclose($file);
 		return (int)(($stopTime - $startTime) * 1000);
 	}
+	
+	/**
+	* Checks if the given password is the same as the password
+	* provided in the config
+	* 
+	* @param string $password
+	* @return boolean If the password is right
+	*/
+	function validatePassword(string $password){		
+		switch ($this->config['type']) {
+			case "bcrypt":
+				return password_verify($password, $this->config['password']);
+				break;
+			case "plain":
+				return $password == $this->config['password'];
+				break;
+		}
+		
+		return false;
+	}
 
 	/**
 	* Render a template
@@ -46,6 +69,10 @@ class Networkstatus {
 	*/
 	function render(array $data)
 	{
-		require $this->template;
+		if(!$this->config['enabled'] || isset($_SESSION['timestamp'])){
+			require $this->template;
+		}else{
+			require $this->config['template'];
+		}
 	}
 }

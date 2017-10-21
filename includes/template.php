@@ -6,22 +6,20 @@
     <meta property="og:url" content="https://static.itsstefan.eu"/>
     <meta property="og:image" content="https://static.itsstefan.eu/cdn/shot-20170125-12783-1n2t37b.jpeg"/>
     <meta property="og:description" content="Lookup the status of our websites and services!"/>
-
-    <meta name="description" content="Lookup the status of our websites and services!">
+    <meta name="description" content="Lookup the status of our websites and services!"/>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.6/paper/bootstrap.min.css" rel="stylesheet">
-    <link href="https://static.itsstefan.eu/cdn/css/bootstrap.css" rel="stylesheet">
+	<!-- Feel free to use this domain for the style, it's CDN hosted, -->
+	<link rel="stylesheet" href="https://static.itsstefan.eu/cdn/css/bootstrap.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- Feel free to use this domain for the style, it's CDN hosted, -->
     <link rel="icon" type="image/png" href="favicon.ico"/>
     <style>
         th, td {
             padding: 8px;
         }
         footer {
-        text-align: center;
+			text-align: center;
         }
     </style>
 </head>
@@ -44,7 +42,7 @@
     </table>
 </div>
 <footer>
-    <p> Powered by, <a href="https://github.com/SupremeNL/Network-Status">Network-Status</a> </p>
+    <p>Powered by, <a href="https://github.com/SupremeNL/Network-Status">Network-Status</a></p>
 </footer>
 <script>
 window.onload = function(){

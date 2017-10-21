@@ -10,6 +10,17 @@ $response = [
 	$id => $id
 ];
 
+if($protected['enabled'] && !isset($_SESSION['timestamp'])){
+	$response = [
+		'id' => $id,
+		'error' => true,
+		'message' => 'You have to be authenticated.'
+	];
+	echo json_encode($response);
+	
+	return;
+}
+
 if(is_numeric($id) && array_key_exists($id, $websites)) {
 	$ping = $networkstatus->check($websites[$id]['domain'], $websites[$id]['port']);
 	if($ping === null) {
