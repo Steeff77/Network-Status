@@ -1,19 +1,21 @@
 <head>
+	
     <title>Network status</title>
-
+	
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="Network Status"/>
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://itsstefan.eu/network-status/"/>
     <meta property="og:image" content="https://static.itsstefan.eu/cdn/shot-20170125-12783-1n2t37b.jpeg"/>
     <meta property="og:description" content="Lookup the status of our websites and services!"/>
     <meta name="description" content="Lookup the status of our websites and services!"/>
-
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- Feel free to use this domain for the style, it's CDN hosted, -->
-	<link rel="stylesheet" href="https://static.itsstefan.eu/cdn/bootstrap/css/bootstrap.css">
-	<link rel="stylesheet" href="https://static.itsstefan.eu/cdn/bootstrap/css/bootstrap-theme.min.css">
-	<script src="https://static.itsstefan.eu/cdn/bootstrap/js/jquery.min.js"></script>
-    <link rel="icon" type="image/png" href="https://static.itsstefan.eu/cdn/favicon.ico" />
+    
+    <!-- Feel free to use this domain for the style, it's CDN hosted, -->
+    <link rel="stylesheet" href="https://static.itsstefan.eu/cdn/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="https://static.itsstefan.eu/cdn/bootstrap/css/bootstrap-theme.min.css">
+	
+    <script src="https://static.itsstefan.eu/cdn/bootstrap/js/jquery.min.js"></script>
+    <link rel="icon" type="image/ico" href="https://static.itsstefan.eu/cdn/favicon.ico" />
     <style>
         th, td {
             padding: 8px;
