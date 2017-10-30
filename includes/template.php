@@ -47,7 +47,7 @@
     <p>Powered by, <a href="https://github.com/SupremeNL/Network-Status">Network-Status</a></p>
 </footer>
 <script>
-window.onload = function(){
+$(document).ready(function() {
 	var sites = <?= json_encode($data) ?>;
 	
 	for(item in sites){	
@@ -74,5 +74,5 @@ window.onload = function(){
 			}
 		});
 	}
-}
+});
 </script>
