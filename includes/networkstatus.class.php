@@ -8,13 +8,11 @@ class Networkstatus {
 	public $template;
 	public $config;
 
-	/**
-	* Intialize the networkstatus class
-	*
-	* @param string $template
-	* @return void
-	*/
-	function __construct($protected, $template = ""){
+    /**
+     * @param $protected
+     * @param string $template
+     */
+    function __construct($protected, $template = ""){
 		$this->config = $protected;
 		$this->template = $template;
 	}
