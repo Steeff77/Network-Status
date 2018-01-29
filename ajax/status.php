@@ -3,7 +3,7 @@
 require_once '../includes/networkstatus.class.php';
 require_once '../config.php';
 
-$networkstatus = new Networkstatus;
+$networkstatus = new Networkstatus($protected);
 
 $id = $_GET['id'];
 $response = [
