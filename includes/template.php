@@ -48,31 +48,30 @@
 </footer>
 <script>
 $(document).ready(function() {
-	var sites = <?= json_encode($data) ?>;
+  var sites = <?= json_encode($data) ?>;
 	
-	for(item in sites){	
-		$.ajax({
-			type: "get",
-			url: "ajax/status.php",
-			data: "id=" + item,
-			success: function(data){
-				var json = JSON.parse(data);
-				console.log(data);
-				
-				if(json == null || json.error == true){
-					$("#badge" + json.id).html("<span class=\"badge badge-danger\">Error</span>");
-					return;
-				}
-				
-				if(json.online == true){
-					$("#badge" + json.id).html("<span class=\"badge badge-success\">Online</span>");
-					$("#ping" + json.id).html(json.ping + "ms");
-				}else{
-					$("#badge" + json.id).html("<span class=\"badge badge-danger\">Offline</span>");
-					$("#ping" + json.id).html("");
-				}
-			}
-		});
+  for(item in sites){	
+    $.ajax({
+      type: "get",
+      url: "ajax/status.php",
+      data: "id=" + item,
+      success: function(data){
+        var json = JSON.parse(data);				
+	
+	if (json == null || json.error == true){
+	  $("#badge" + json.id).html("<span class=\"badge badge-danger\">Error</span>");
+	  return;
 	}
+				
+	if (json.online === true){
+	  $("#badge" + json.id).html("<span class=\"badge badge-success\">Online</span>");
+	  $("#ping" + json.id).html(json.ping + "ms");
+	} else {
+	  $("#badge" + json.id).html("<span class=\"badge badge-danger\">Offline</span>");
+	  $("#ping" + json.id).html("");
+	}
+      }
+   });
+ }
 });
 </script>
