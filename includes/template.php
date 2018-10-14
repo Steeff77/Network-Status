@@ -44,7 +44,7 @@
     </table>
 </div>
 <footer>
-    <p>Powered by, <a href="https://github.com/SupremeNL/Network-Status">Network-Status</a></p>
+    <p>Powered by, <a href="https://github.com/Illusions162/Network-Status/">Network-Status</a></p>
 </footer>
 <script>
 $(document).ready(function() {
