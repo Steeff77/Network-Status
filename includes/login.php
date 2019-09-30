@@ -29,14 +29,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     <link rel="icon" type="image/png" href="https://static.itsstefan.eu/cdn/favicon.ico" />
     <style>
         footer {
-			text-align: center;
+	 text-align: center;
         }
-		#password {
-			width: 200px;
-		}
-		#submit {
-			width: 100px;
-		}
+	#password {
+	 width: 200px;
+	}
+	#submit {
+	 width: 100px;
+	}
     </style>
 </head>
 <div align="center">
@@ -50,5 +50,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 	</form>
 </div>
 <footer>
-    <p>Powered by, <a href="https://github.com/SupremeNL/Network-Status">Network-Status</a></p>
+    <p>Powered by, <a href="https://github.com/Illusions162/Network-Status">Network-Status</a></p>
 </footer>
