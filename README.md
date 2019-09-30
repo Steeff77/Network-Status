@@ -3,8 +3,6 @@ Official source of https://itsstefan.eu/network-status  © Indra &amp; Stefan
 
 
 # Changelogs
-~~Update: ***9/17/2017***
-New demo version: http://kharismastudio.net/servercheck/ (They modified the script a little bit)~~
 
 Update: [#1](https://github.com/Illusions162/Network-Status/pull/1)
 Refactored according to PHP 7.1, by: [@ElForastero](https://github.com/ElForastero)
@@ -50,3 +48,6 @@ Removed closing tag and fixes class comment, by [@Archie22is](https://github.com
 
 Update: [#15](https://github.com/Illusions162/Network-Status/pull/15)
 Updated the ***README.md*** and added the contributors & pull-requests urls by ID, by [@Illusions162](https://github.com/Illusions162)
+
+Update: New Design
+SOON: New design is on his way to this repository :)
